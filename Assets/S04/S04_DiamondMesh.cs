@@ -27,8 +27,19 @@ public class S04_DiamondMesh : MonoBehaviour
 
         // TODO: 삼각형 8개(인덱스 24개)를 winding order에 맞게 채우기
         int[] triangles = new int[]
-        {
-        };
+{
+            // ── 위쪽 4면 (위 꼭짓점 = 4번) ──
+            1, 0, 4,
+            2, 1, 4,
+            3, 2, 4,
+            0, 3, 4,
+
+            // ── 아래쪽 4면 (아래 꼭짓점 = 5번) ──
+            0, 1, 5,
+            1, 2, 5,
+            2, 3, 5,
+            3, 0, 5,
+};
 
         Mesh mesh = new Mesh();
         mesh.vertices = vertices;
