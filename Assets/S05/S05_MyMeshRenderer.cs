@@ -27,7 +27,8 @@ public class S05_MyMeshRenderer : MonoBehaviour
 
         // 3. 픽셀 채우기 (실습 단계에 따라 이 줄을 교체)
         // FillBackground(backgroundColor);
-        FillVerticalStripes(patternSize, colorA, colorB);
+        // FillVerticalStripes(patternSize, colorA, colorB);
+        FillCheckerboard(patternSize, colorA, colorB);
 
         // 4. SetPixel 변경 사항을 실제 텍스처에 반영
         canvasTexture.Apply();
@@ -60,6 +61,21 @@ public class S05_MyMeshRenderer : MonoBehaviour
 
             for (int y = 0; y < canvasHeight; y++)
                 canvasTexture.SetPixel(x, y, stripeColor);
+        }
+    }
+
+    // 수정 실습 ② — 체스판 무늬
+    private void FillCheckerboard(int size, Color colorA, Color colorB)
+    {
+        for (int x = 0; x < canvasWidth; x++)
+        {
+            for (int y = 0; y < canvasHeight; y++)
+            {
+                // 줄무늬는 x만 봤지만, 체스판은 x와 y를 함께 본다
+                bool isColorA = ((x / size) + (y / size)) % 2 == 0;
+
+                canvasTexture.SetPixel(x, y, isColorA ? colorA : colorB);
+            }
         }
     }
 }
