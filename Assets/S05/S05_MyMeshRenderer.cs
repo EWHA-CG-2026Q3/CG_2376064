@@ -26,7 +26,8 @@ public class S05_MyMeshRenderer : MonoBehaviour
         canvasTexture.filterMode = FilterMode.Point;
 
         // 3. 픽셀 채우기 (실습 단계에 따라 이 줄을 교체)
-        FillBackground(backgroundColor);
+        // FillBackground(backgroundColor);
+        FillVerticalStripes(patternSize, colorA, colorB);
 
         // 4. SetPixel 변경 사항을 실제 텍스처에 반영
         canvasTexture.Apply();
@@ -44,6 +45,21 @@ public class S05_MyMeshRenderer : MonoBehaviour
             {
                 canvasTexture.SetPixel(x, y, color);
             }
+        }
+    }
+
+    // 수정 실습 ① — 세로 줄무늬
+    private void FillVerticalStripes(int width, Color colorA, Color colorB)
+    {
+        for (int x = 0; x < canvasWidth; x++)
+        {
+            // x를 width로 나눈 몫이 짝수면 colorA, 홀수면 colorB
+            bool isColorA = (x / width) % 2 == 0;
+
+            Color stripeColor = isColorA ? colorA : colorB;
+
+            for (int y = 0; y < canvasHeight; y++)
+                canvasTexture.SetPixel(x, y, stripeColor);
         }
     }
 }
