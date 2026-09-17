@@ -5,11 +5,11 @@ public class S06_SoftwareRasterizer : MonoBehaviour
 {
     [SerializeField] private int canvasWidth = 256;
     [SerializeField] private int canvasHeight = 256;
-    [SerializeField] private Vector2 vertexA = new Vector2(128, 200);
-    [SerializeField] private Vector2 vertexB = new Vector2(60, 60);
-    [SerializeField] private Vector2 vertexC = new Vector2(200, 60);
-    [SerializeField] private Color fillColor = new Color(1f, 0.6f, 0.2f, 1f);
-    [SerializeField] private Color backgroundColor = new Color(0f, 0f, 0f, 1f);
+    [SerializeField] private Vector2 vertexA = new Vector2(40f, 225f);
+    [SerializeField] private Vector2 vertexB = new Vector2(15f, 45f);
+    [SerializeField] private Vector2 vertexC = new Vector2(235f, 95f);
+    [SerializeField] private Color fillColor = new Color(0.45f, 0.35f, 0.9f, 1f);
+    [SerializeField] private Color backgroundColor = new Color(0.07f, 0.07f, 0.1f, 1f);
 
     private Texture2D canvasTexture;
     private RawImage targetImage;
