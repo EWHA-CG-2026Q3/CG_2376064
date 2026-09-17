@@ -256,10 +256,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::S06_MyImmediateTriangle
   glMaterial: {fileID: 2100000, guid: b9bccc9d6d8abf644a2dc39a0dccdbeb, type: 2}
-  vertexA: {x: 0, y: 0, z: 0}
-  vertexB: {x: 1, y: 0, z: 0}
-  vertexC: {x: 0.5, y: 1, z: 0}
-  triangleColor: {r: 1, g: 0.6, b: 0.2, a: 1}
+  vertexA: {x: -2, y: -1.2, z: 0}
+  vertexB: {x: 2.2, y: -1.2, z: 0}
+  vertexC: {x: 0.4, y: 2.6, z: 0}
+  triangleColor: {r: 0.2, g: 0.85, b: 0.7, a: 1}
 --- !u!1 &2113064066
 GameObject:
   m_ObjectHideFlags: 0

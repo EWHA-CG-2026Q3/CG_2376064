@@ -3,10 +3,10 @@
 public class S06_MyImmediateTriangle : MonoBehaviour
 {
     [SerializeField] private Material glMaterial;
-    [SerializeField] private Vector3 vertexA = new Vector3(0f, 0f, 0f);
-    [SerializeField] private Vector3 vertexB = new Vector3(1f, 0f, 0f);
-    [SerializeField] private Vector3 vertexC = new Vector3(0.5f, 1f, 0f);
-    [SerializeField] private Color triangleColor = new Color(1f, 0.6f, 0.2f, 1f);
+    [SerializeField] private Vector3 vertexA = new Vector3(-2f, -1.2f, 0f);
+    [SerializeField] private Vector3 vertexB = new Vector3(2.2f, -1.2f, 0f);
+    [SerializeField] private Vector3 vertexC = new Vector3(0.4f, 2.6f, 0f);
+    [SerializeField] private Color triangleColor = new Color(0.2f, 0.85f, 0.7f, 1f);
 
     void OnRenderObject()
     {
