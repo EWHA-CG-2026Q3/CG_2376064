@@ -7,6 +7,10 @@ public class S07_DepthTest2 : MonoBehaviour
     [SerializeField] private int canvasWidth = 256;
     [SerializeField] private int canvasHeight = 256;
 
+    // [과제 2] z 값 설계 이유: 삼각형1은 z가 오른쪽으로 갈수록 커지고 삼각형2는 왼쪽으로 갈수록
+    // 커지도록 서로 반대 방향으로 기울여, 두 평면이 겹치는 영역 중앙에서 교차하게 만들었다 —
+    // 교차선을 경계로 앞뒤 관계가 뒤집히므로 어느 한쪽도 겹친 영역 전체를 차지할 수 없다.
+
     // 삼각형1: z가 오른쪽(x+)으로 갈수록 커짐 — 왼쪽이 더 가까움
     [SerializeField] private Vector3 vertexA1 = new Vector3(100, 180, 0.3f);
     [SerializeField] private Vector3 vertexB1 = new Vector3(60, 80, 0.15f);

@@ -8,7 +8,6 @@ public class S07_Clipping : MonoBehaviour
     [SerializeField] private int canvasWidth = 256;
     [SerializeField] private int canvasHeight = 256;
     [SerializeField] private int clipMargin = 40;  // 캔버스 안쪽으로 이만큼 들어온 지점이 클리핑 경계
-    // 왼쪽·아래(-20,15), 위(120,280), 오른쪽(240,150) — 네 경계를 모두 넘어가는 볼록 사각형
     [SerializeField]
     private List<Vector2> polygon = new List<Vector2> {
         new Vector2(-20, 15), new Vector2(120, 280), new Vector2(240, 150), new Vector2(120, 70)
@@ -98,6 +97,11 @@ public class S07_Clipping : MonoBehaviour
 
     // ── TODO: ClipLeft를 참고해서 오른쪽 경계(x <= boundary)로 자르는 함수를 완성하세요 ──
     // 지금은 "통과만 시키는" 상태 — 완성하기 전까지는 이 단계에서 아무것도 안 잘림
+
+    // [과제 3] polygon 좌표 설계 이유: 사각형의 세 꼭짓점을 각각 왼쪽아래(-20,15)·위쪽(120,280)·
+    // 오른쪽(240,150) 경계 밖에 두어 네 경계를 모두 넘어가게 하고, 한 경계만 처리해서는 끝나지 않고
+    // ClipLeft→ClipRight→ClipBottom→ClipTop이 순서대로 각자의 교차점을 새로 만들어야
+    // 완성되도록(앞 단계의 출력이 다음 단계의 입력이 되는 것을 보이도록) 설계했다.
     private List<Vector2> ClipRight(List<Vector2> input, float boundary)
     {
         List<Vector2> output = new List<Vector2>();
