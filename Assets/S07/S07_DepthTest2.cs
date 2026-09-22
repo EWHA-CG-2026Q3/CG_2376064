@@ -7,19 +7,22 @@ public class S07_DepthTest2 : MonoBehaviour
     [SerializeField] private int canvasWidth = 256;
     [SerializeField] private int canvasHeight = 256;
 
+    // 삼각형1: z가 오른쪽(x+)으로 갈수록 커짐 — 왼쪽이 더 가까움
     [SerializeField] private Vector3 vertexA1 = new Vector3(100, 180, 0.3f);
-    [SerializeField] private Vector3 vertexB1 = new Vector3(60, 80, 0.3f);
-    [SerializeField] private Vector3 vertexC1 = new Vector3(180, 80, 0.3f);
+    [SerializeField] private Vector3 vertexB1 = new Vector3(60, 80, 0.15f);
+    [SerializeField] private Vector3 vertexC1 = new Vector3(180, 80, 0.6f);
     [SerializeField] private Color color1 = new Color(1f, 0.4f, 0.2f, 1f);
 
-    [SerializeField] private Vector3 vertexA2 = new Vector3(150, 200, 0.2f);
-    [SerializeField] private Vector3 vertexB2 = new Vector3(90, 60, 0.8f);
-    [SerializeField] private Vector3 vertexC2 = new Vector3(220, 60, 0.8f);
+    // 삼각형2: z가 왼쪽(x-)으로 갈수록 커짐 — 삼각형1과 반대로 기울여 두 평면이 겹친 영역 중앙에서 교차
+    [SerializeField] private Vector3 vertexA2 = new Vector3(150, 200, 0.35f);
+    [SerializeField] private Vector3 vertexB2 = new Vector3(90, 60, 0.6f);
+    [SerializeField] private Vector3 vertexC2 = new Vector3(220, 60, 0.15f);
     [SerializeField] private Color color2 = new Color(0.2f, 0.5f, 1f, 1f);
 
-    [SerializeField] private Vector3 vertexA3 = new Vector3(210, 220, 0.3f);
-    [SerializeField] private Vector3 vertexB3 = new Vector3(160, 50, 0.6f);
-    [SerializeField] private Vector3 vertexC3 = new Vector3(250, 50, 0.9f);
+    // 삼각형3: 왼쪽 아래가 가장 가까움 — 삼각형2와도 교차선이 생기도록
+    [SerializeField] private Vector3 vertexA3 = new Vector3(210, 220, 0.5f);
+    [SerializeField] private Vector3 vertexB3 = new Vector3(160, 50, 0.1f);
+    [SerializeField] private Vector3 vertexC3 = new Vector3(250, 50, 0.45f);
     [SerializeField] private Color color3 = new Color(0.3f, 0.9f, 0.4f, 1f);
 
     private Texture2D canvasTexture;

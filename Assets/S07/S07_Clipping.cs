@@ -8,9 +8,10 @@ public class S07_Clipping : MonoBehaviour
     [SerializeField] private int canvasWidth = 256;
     [SerializeField] private int canvasHeight = 256;
     [SerializeField] private int clipMargin = 40;  // 캔버스 안쪽으로 이만큼 들어온 지점이 클리핑 경계
+    // 왼쪽·아래(-20,15), 위(120,280), 오른쪽(240,150) — 네 경계를 모두 넘어가는 볼록 사각형
     [SerializeField]
     private List<Vector2> polygon = new List<Vector2> {
-        new Vector2(10, 130), new Vector2(130, 250), new Vector2(246, 130)
+        new Vector2(-20, 15), new Vector2(120, 280), new Vector2(240, 150), new Vector2(120, 70)
     };
     [SerializeField] private Color fillColor = new Color(1f, 0.6f, 0.2f, 1f);
     [SerializeField] private Color marginOutlineColor = new Color(0.5f, 0.5f, 0.5f, 1f);
