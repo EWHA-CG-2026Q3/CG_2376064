@@ -9,7 +9,9 @@ public class S08_DirectTransform : MonoBehaviour
         RotationNaive,
         Rotate,
         TranslateThenRotate,
-        RotateThenTranslate
+        RotateThenTranslate,   
+        TranslateThenScale,    
+        ScaleThenTranslate    
     }
 
     [SerializeField] DemoMode demoMode = DemoMode.Translation;
@@ -57,6 +59,14 @@ public class S08_DirectTransform : MonoBehaviour
                 break;
             default:
                 verts = baseVertices;
+                break;
+            case DemoMode.TranslateThenScale:
+                verts = ApplyTranslation(baseVertices, translation);
+                verts = ApplyScale(verts, scale);            // 이동한 결과를 스케일
+                break;
+            case DemoMode.ScaleThenTranslate:
+                verts = ApplyScale(baseVertices, scale);
+                verts = ApplyTranslation(verts, translation); // 스케일한 결과를 이동
                 break;
         }
         diamondMesh.SetVertices(verts);
