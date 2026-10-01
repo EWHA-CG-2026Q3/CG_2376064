@@ -24,6 +24,14 @@ public class S09_Shear : MonoBehaviour
         diamondMesh.SetVertices(verts);
     }
 
+    // 꼭대기 정점 (0.5, 1, 0.5)의 기울이기 결과를 Console에서 확인
+    void OnValidate()
+    {
+        Vector3 top = new Vector3(0.5f, 1f, 0.5f);
+        Vector4 h = MultiplyMatrixVectorRaw(ShearMatrixRaw(k), ToHomogeneous(top));
+        Debug.Log($"k = {k} : 꼭대기 {top} → {FromHomogeneous(h)}");
+    }
+
     // ---------- 행렬 빌더 ----------
 
     // 1열: e₁ 그대로 / 2열: e₂ → (k, 1, 0) / 3열: e₃ 그대로 / 4열: 원점 그대로
