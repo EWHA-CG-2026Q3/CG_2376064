@@ -4,6 +4,7 @@ using UnityEngine;
 // 정점: 아래 둘레 n개 + 위 둘레 n개 + 아래 중심 1개 + 위 중심 1개 = 2n + 2개
 // 삼각형: 옆면 n × 2 + 윗면 n + 아랫면 n = 4n개
 // 피벗은 바닥 한가운데 (y = 0이 바닥, y = height가 윗면)
+[ExecuteAlways]
 [RequireComponent(typeof(MeshFilter), typeof(MeshRenderer))]
 public class S12_PillarMesh : MonoBehaviour
 {
@@ -59,8 +60,10 @@ public class S12_PillarMesh : MonoBehaviour
         mesh.triangles = triangles;
         mesh.RecalculateNormals();
 
-        GetComponent<MeshFilter>().mesh = mesh;
-        GetComponent<MeshRenderer>().sharedMaterial =
-            new Material(Shader.Find("Universal Render Pipeline/Lit"));
+        GetComponent<MeshFilter>().sharedMesh = mesh;
+        MeshRenderer meshRenderer = GetComponent<MeshRenderer>();
+        if (meshRenderer.sharedMaterial == null)
+            meshRenderer.sharedMaterial =
+                new Material(Shader.Find("Universal Render Pipeline/Lit"));
     }
 }
