@@ -26,7 +26,7 @@
 
             float4 frag(float2 uv : TEXCOORD0) : SV_Target
             {
-                float2 p = uv;
+                float2 p = uv * 0.25 + float2(0.5, 0);
 
                 // 미션 1: B2 한 칸만 표면 전체에
                 // p = uv * 0.25 + float2(0.25, 0.5);
