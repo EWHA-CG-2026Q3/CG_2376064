@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-36287912002669725
+--- !u!114 &-4265559218393080765
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
@@ -20,13 +20,13 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Mat_Candle
-  m_Shader: {fileID: 4800000, guid: a6552d07666a080428484228060a081d, type: 3}
+  m_Name: Mat_Mid_GL
+  m_Shader: {fileID: 4800000, guid: 601b9a90f71748c39f1a837ece92260f, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
   m_InvalidKeywords: []
-  m_LightmapFlags: 0
+  m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
@@ -128,8 +128,8 @@ Material:
     - _XRMotionVectorsPass: 1
     - _ZWrite: 1
     m_Colors:
-    - _BaseColor: {r: 0.8, g: 0.75, b: 0.65, a: 1}
-    - _Color: {r: 0.8, g: 0.75, b: 0.65, a: 1}
+    - _BaseColor: {r: 1, g: 0.042452812, b: 0.042452812, a: 1}
+    - _Color: {r: 1, g: 0.042452782, b: 0.042452782, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
   m_BuildTextureStacks: []

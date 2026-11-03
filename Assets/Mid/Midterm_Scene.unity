@@ -11674,7 +11674,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a9160cd84d0ea7418c642370d2f0637, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FireflyTrailGL
-  glMaterial: {fileID: 2100000, guid: b9bccc9d6d8abf644a2dc39a0dccdbeb, type: 2}
+  glMaterial: {fileID: 2100000, guid: 6353b4841def4113b6a7f8668fa2e3dd, type: 2}
   trailLength: 40
   recordInterval: 0.03
   headColor: {r: 0.9, g: 1, b: 0.4, a: 1}

@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Mat_Pond
-  m_Shader: {fileID: -6465566751694194690, guid: da471a532457de14bbfa5c9bc86e4912, type: 3}
+  m_Name: Mat_Mid_Pond
+  m_Shader: {fileID: -6465566751694194690, guid: cef875e97fcf4751ac58f39d10417f1f, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
